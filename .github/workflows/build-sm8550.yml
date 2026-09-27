@@ -21,10 +21,8 @@ jobs:
         mode:
           - vanilla
           - ksun
-          - susfs
         rom:
           - oneui
-          - aosp
 
     steps:
       - name: Checkout source
