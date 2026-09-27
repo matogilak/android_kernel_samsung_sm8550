@@ -20,14 +20,9 @@ jobs:
       matrix:
         device:
           - dm1q
-          - dm2q
-          - dm3q
-          - q5q
-          - b5q
         mode:
           - vanilla
           - ksun
-          - susfs
 
     steps:
       - name: Checkout source
