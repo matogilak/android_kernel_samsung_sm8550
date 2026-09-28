@@ -86,7 +86,9 @@ jobs:
         run: |
           mode='${{ matrix.mode }}'
           rom='${{ matrix.rom }}'
-          ./build.sh "$mode" "$rom"
+          # Web uploads to GitHub drop the execute bit, so restore it and call via bash.
+          chmod +x build.sh scripts/*.sh
+          bash ./build.sh "$mode" "$rom"
 
       - name: Upload AnyKernel3 kernel artifact
         uses: actions/upload-artifact@v7
